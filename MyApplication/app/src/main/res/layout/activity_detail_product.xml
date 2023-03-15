@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    tools:context=".DetailProductActivity">
+
+    <LinearLayout
+        android:id="@+id/topMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_weight="0.8"
+                android:text="Detail"
+                android:textAlignment="center"
+                android:textColor="#ff5e00"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/homeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_baseline_home_24" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivPicProduct"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:srcCompat="@mipmap/cat1_burger_foreground" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivMinus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@mipmap/btn_minus_foreground" />
+
+            <TextView
+                android:id="@+id/tvNumOfProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivPlus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="2dp"
+                app:srcCompat="@mipmap/btn_plus_foreground" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:justificationMode="inter_word"
+            android:text="Description"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/topMain">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/btn_orange"
+            android:text="Add to card"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
